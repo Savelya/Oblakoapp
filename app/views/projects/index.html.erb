@@ -1,0 +1,15 @@
+<h1>Задачи</h1>
+
+<% @projects.each do |project| %>
+    <h3 style="text-transform:uppercase;"><%= project.title %></h3>
+    <ul>
+        <% project.todos.each do |todo| %>
+            <li><%= todo.text %></li>
+        <% end %>
+    </ul>
+
+<% end %>
+
+<h3>Новая задача</h3>
+<%= link_to 'Добавить новую задачу', "#", :id => "show" %>
+<%= render 'todos/form' %>
