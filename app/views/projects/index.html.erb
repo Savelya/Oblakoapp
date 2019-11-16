@@ -1,15 +1,29 @@
-<h1>Задачи</h1>
+<%= stylesheet_link_tag "application" %>
 
-<% @projects.each do |project| %>
-    <h3 style="text-transform:uppercase;"><%= project.title %></h3>
-    <ul>
-        <% project.todos.each do |todo| %>
-            <li><%= todo.text %></li>
+<div id="header">
+    <h1>Задачи</h1>
+    <%= link_to '+', "#", :id => "show" %>
+</div>
+<div class="container-fluid">
+    <div id="projects" class="row">
+        <% @projects.each do |project| %>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" >
+                <div class="project">
+                    <h3 style="text-transform:uppercase;"><%= project.title %></h3>
+                    <ul>
+                        <% project.todos.each do |todo| %>
+                            <li>
+                                <input type="checkbox" class='icheck-me' data-skin="square" data-color="blue" id=<%= todo.id %>>
+                                <div class="todo-text" id="a<%= todo.id %>">
+                                    <%= todo.text %>
+                                </div>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
         <% end %>
-    </ul>
+    </div>
+</div>
 
-<% end %>
-
-<h3>Новая задача</h3>
-<%= link_to 'Добавить новую задачу', "#", :id => "show" %>
 <%= render 'todos/form' %>

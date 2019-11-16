@@ -1,0 +1,185 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+
+ */
+
+
+
+/* iCheck plugin Square skin, blue
+----------------------------------- */
+/* line 4, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.icheckbox_square-blue,
+.iradio_square-blue {
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  background: url(/assets/icheck/square/blue-abff66ea99f7e2b2a51d02feb00d0385f2ac35100fdc65b5d4e4395228fd020b.png) no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 18, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.icheckbox_square-blue {
+  background-position: 0 0;
+}
+
+/* line 21, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.icheckbox_square-blue.hover {
+  background-position: -24px 0;
+}
+
+/* line 24, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.icheckbox_square-blue.checked {
+  background-position: -48px 0;
+}
+
+/* line 27, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.icheckbox_square-blue.disabled {
+  background-position: -72px 0;
+  cursor: default;
+}
+
+/* line 31, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.icheckbox_square-blue.checked.disabled {
+  background-position: -96px 0;
+}
+
+/* line 35, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.iradio_square-blue {
+  background-position: -120px 0;
+}
+
+/* line 38, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.iradio_square-blue.hover {
+  background-position: -144px 0;
+}
+
+/* line 41, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.iradio_square-blue.checked {
+  background-position: -168px 0;
+}
+
+/* line 44, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.iradio_square-blue.disabled {
+  background-position: -192px 0;
+  cursor: default;
+}
+
+/* line 48, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+.iradio_square-blue.checked.disabled {
+  background-position: -216px 0;
+}
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* line 54, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/icheck-rails-1.0.2.2/vendor/assets/stylesheets/icheck/square/blue.scss */
+  .icheckbox_square-blue,
+  .iradio_square-blue {
+    background-image: url(/assets/icheck/square/blue@2x-c0ce7ecfbd5605a7a0d0239d83b736eda75dbc71ff183472e02c6d6cdfbcc888.png);
+    -webkit-background-size: 240px 24px;
+    background-size: 240px 24px;
+  }
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("OpenSans-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url("OpenSans-Semibold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 22, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+body {
+  background-color: #f8f8f8;
+  margin: 0px;
+}
+
+/* line 26, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+#header {
+  font-family: 'OpenSans-Light';
+  display: flex;
+  top: 0px;
+  width: 100%;
+  height: 75px;
+  color: white;
+  font-size: 75%;
+  background-color: #3aafda;
+}
+/* line 35, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+#header h1 {
+  margin: auto;
+  text-align: center;
+  line-height: 70px;
+  vertical-align: middle;
+}
+/* line 41, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+#header a {
+  color: white;
+  font-size: 200%;
+}
+
+/* line 46, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+#projects {
+  display: flex;
+  align-items: baseline;
+}
+
+/* line 50, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+.project {
+  background-color: white;
+  min-width: 400px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75);
+}
+/* line 57, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+.project h3 {
+  padding: 5px 15px 10px 15px;
+  font-family: 'OpenSans-Semibold';
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 80%;
+}
+/* line 63, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+.project ul {
+  font-family: 'OpenSans-Light';
+  list-style-type: none;
+  padding: 0px;
+}
+/* line 67, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+.project ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* line 71, C:/Sites/oblakoapp/app/assets/stylesheets/application.css.scss */
+.project ul li .icheckbox_square-blue {
+  margin: 10px 20px;
+}
