@@ -7,7 +7,8 @@ class TodosController < ApplicationController
     end
 
     def update
-
+        @todo = Todo.find(params[:todo][:id])
+        @todo.update(isCompleted: params[:todo][:isCompleted])
     end
 
     private

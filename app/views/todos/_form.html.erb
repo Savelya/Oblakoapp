@@ -1,12 +1,17 @@
 <%= javascript_include_tag "application" %>
+<div id="back">
+</div>
 <%= form_with scope: :todo, url: "/projects/:project_id/todos", local: true, id: "form" do |form| %>
-    <%= form.collection_select(:project_id, Project.all, :id, :title) %>
-    <p>
+    <h3> НОВАЯ ЗАДАЧА </h3>
+    <div>
         <%= form.text_field :text, placeholder: "Название задачи..." %>
-    </p>
+        <%= form.collection_select(:project_id, Project.all, :id, :title, {:prompt => "Категория"}, {:class=>"select2"}) %>
+        
 
-    <p>
-        <%= link_to 'ОТМЕНА', "#", :id => "hide" %>
-        <%= link_to 'OK', "#", :onclick => "$('#form').submit()" %>    
-    </p>
+        <div id="buttons">
+            <%= link_to 'ОТМЕНА', "#", :id => "hide" %>
+            <%= link_to 'OK', "#", :onclick => "$('#form').submit()", :id => "add" %>    
+        </div>
+    </div>
 <% end %>
+

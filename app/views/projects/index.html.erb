@@ -2,8 +2,9 @@
 
 <div id="header">
     <h1>Задачи</h1>
-    <%= link_to '+', "#", :id => "show" %>
+    
 </div>
+<%= link_to '+', "#", :id => "show" %>
 <div class="container-fluid">
     <div id="projects" class="row">
         <% @projects.each do |project| %>
@@ -13,7 +14,10 @@
                     <ul>
                         <% project.todos.each do |todo| %>
                             <li>
-                                <input type="checkbox" class='icheck-me' data-skin="square" data-color="blue" id=<%= todo.id %>>
+                                <%= form_with scope: :todo, :url => "/projects/:project_id/todos/:id(.:format)", method: "put", local: true do |form| %>
+                                    <%= form.check_box :isCompleted, :class => "icheck-me", :id => todo.id, :checked => todo.isCompleted %>
+                                    <%= form.hidden_field :id, :value => todo.id %>
+                                <% end %>
                                 <div class="todo-text" id="a<%= todo.id %>">
                                     <%= todo.text %>
                                 </div>

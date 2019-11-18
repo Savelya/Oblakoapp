@@ -16,26 +16,41 @@
 //= require_tree .
 //= require_self
 //= require 'icheck'
-//= require bootstrap-sprockets
    
 
 $(document).ready(function() {
+    $(".select2").select2();
+    $(".select2").select2({
+        placeholder: "Категория",
+        minimumResultsForSearch: -1
+    });
+
     $("#form").hide();
+    $("#back").hide();
+
     $("#hide").click(function() {
         $("#form").hide();
-        $("#show").show();
+        $("#back").hide();
     });
+
     $("#show").click(function() {
         $("#form").show();
-        $("#show").hide();
+        $("#back").show();
     });
     
     $(".icheck-me").on("ifChecked", function(event){
-        $(this).parent().parent().children(".todo-text").css("text-decoration", "line-through");
+        $(this).parent().parent().parent().children(".todo-text").css("text-decoration", "line-through");
+        $(this).parent().parent().submit();
     });
 
     $(".icheck-me").on("ifUnchecked", function(event){
-        $(this).parent().parent().children(".todo-text").css("text-decoration", "none");
+        $(this).parent().parent().parent().children(".todo-text").css("text-decoration", "none");
+        $(this).parent().parent().submit();
+    });
+
+    $(".todo-text").click(function(){
+        id = "#" + $(this).attr("id").substr(1);
+        $(id).iCheck('toggle');
     });
 
 });
@@ -44,12 +59,13 @@ function icheck(){
     if($(".icheck-me").length > 0){
       $(".icheck-me").each(function(){
         var $el = $(this);
-        var skin = ($el.attr('data-skin') !== undefined) ? "_" + $el.attr('data-skin') : "",
-        color = ($el.attr('data-color') !== undefined) ? "-" + $el.attr('data-color') : "";
         var opt = {
-          checkboxClass: 'icheckbox' + skin + color,
+          checkboxClass: 'icheckbox_square-blue',
         }
         $el.iCheck(opt);
+        if ($el.attr('checked')) {
+            $el.parent().parent().parent().children(".todo-text").css("text-decoration", "line-through");
+        }
       });
     }
 }
