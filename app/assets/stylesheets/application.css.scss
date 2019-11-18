@@ -20,19 +20,19 @@
 
 @font-face {
 	font-family: 'OpenSans-Regular';
-	src: font-url(font-path('OpenSans-Regular.ttf'));
+	src: url(font-path('OpenSans-Regular.ttf'));
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'OpenSans-Light';
-	src: font-url(font-path('OpenSans-Light.ttf'));
+	src: url(font-path('OpenSans-Light.ttf'));
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'OpenSans-Semibold';
-	src: font-url(font-path('OpenSans-Semibold.ttf'));
+	src: url(font-path('OpenSans-Semibold.ttf'));
 	font-weight: normal;
 	font-style: normal;
 }
