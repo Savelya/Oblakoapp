@@ -86,6 +86,12 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  # Add the font path
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+  # Include font files to Assets
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
