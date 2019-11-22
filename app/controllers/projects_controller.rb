@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
         @projects = Project.includes(:todos)
         respond_to do |format|
             format.html # show.html.erb
-            format.json { render json: @projects }
+            format.json { render json: @projects, @projects.todos }
            end
     end
 end
