@@ -4,6 +4,9 @@ class ProjectsController < ApplicationController
         respond_to do |format|
             format.html # show.html.erb
             format.json { 
+                @projects.each do |project|
+                    render project.todos
+                end
                 render json: @projects
              }
            end
