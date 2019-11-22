@@ -1,10 +1,9 @@
 class TodosController < ApplicationController
 
     def index
-        @projects = Project.includes(:todos)
-        @todos = @projects.todos
+        @todos = Todo.all
         respond_to do |format|
-            format.json { render json: @projects }
+            format.json { render json: @todos }
         end
     end
 
